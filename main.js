@@ -16,8 +16,15 @@ setTimeout(() => {
         .then(data => {
             console.log(data);
             document.getElementById("ipwho").innerHTML = `
-            <p class="info country"><img src="${data.country_flag}">${data.city}, ${data.country_name}</p>
+            <p class="info city">City: <br> ${data.city}</p>
+            <p class="info state">Division/State: <br> ${data.state_prov}</p>
+            <p class="info country"><img src="${data.country_flag}">${data.country_name + ',' + data.country_code2}</p>
             <p class="info latlong">Latitude: ${data.latitude} <br> Longitude: ${data.longitude}</p>
+            <p class="info language">Language: <br> ${data.languages}</p>
+            <p class="info currency">Currency: <br> ${data.currency.code} ${data.currency.symbol}</p>
+            <p class="info timezone">Timezone: <br> +${data.time_zone.offset + ' ' + data.time_zone.name}</p>
+
+            <p class="info calling-code">Calling Country Code: <br> ${data.calling_code}</p>
             `;
         })
 }, 1000);
