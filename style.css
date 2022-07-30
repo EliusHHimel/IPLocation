@@ -9,9 +9,50 @@ body {
     padding-bottom: 25px;
 }
 
+.ip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    width: fit-content;
+    padding: 10px 20px;
+    /* border: 2px solid #fff; */
+    border-radius: 15px;
+    /* background-color: #252525; */
+}
+
+#ip-input {
+    width: 300px;
+    height: 100px;
+    border: 5px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    color: #ccc;
+    background-color: #252525;
+    outline: none;
+}
+
+.search-btn {
+    width: 150px;
+    margin-left: -4px;
+    height: 120px;
+    border-radius: 0px 50% 50% 0px;
+    border: 5px solid rgb(0, 86, 95);
+    background-color: #252525;
+    padding: 5px;
+    font-size: 16px;
+    color: #ccc;
+    outline: none;
+    cursor: pointer;
+}
+
 #ip {
     /* position: absolute; */
     border: 5px solid seagreen;
+    border-radius: 50% 0% 0% 50%;
+    height: 80px;
+    padding: 15px 5px;
+    font-size: medium;
 }
 
 #ipwho {
