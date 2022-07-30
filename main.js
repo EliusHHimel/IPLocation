@@ -1,13 +1,17 @@
 
-fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("ip").innerHTML = `<span>Your IP is:</span><span>${data.ip}</span>`;
-    })
-    .catch(error => console.log(error));
+function getIP() {
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("ip").innerHTML = `<span>Your IP is:</span><span>${data.ip}</span>`;
+            geoLocation();
+        })
+        .catch(error => console.log(error));
+}
 
+getIP();
 
-setTimeout(() => {
+function geoLocation() {
     let ip = document.getElementById("ip").innerText;
     ip = ip.split("Your IP is:\n");
     ip = ip[1];
@@ -31,5 +35,5 @@ setTimeout(() => {
             <p class="info org">Organization: <br> ${data.organization}</p>
             `;
         })
-}, 1000);
+};
 
