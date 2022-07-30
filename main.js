@@ -18,7 +18,7 @@ function geoLocation() {
     fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=d1374b72c8ae44e5add4c848db5dd48e&ip=${ip}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+
             document.getElementById("ipwho").innerHTML = `
             <p class="info city">City: <br> ${data.city}</p>
             <p class="info zipcode">Zip Code: <br> ${data.zipcode ? data.zipcode : 'Not Found'}</p>
