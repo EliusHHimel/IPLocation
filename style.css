@@ -38,9 +38,20 @@ body {
     cursor: pointer;
 }
 
+.search-btn:hover {
+    background-color: #ccc;
+    color: #252525;
+}
+
 #ip {
     /* position: absolute; */
-    border: 5px solid seagreen;
+    border: 5px solid #d744ff;
+    background: #d744ff40;
+}
+
+#ip:hover {
+    border: 5px solid #a033be;
+    background: #a033be40;
 }
 
 #ipwho {
@@ -67,7 +78,7 @@ body {
     height: 145px;
     width: 145px;
     padding: 15px;
-    background-color: #252525;
+    background-color: #25252540;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,10 +86,142 @@ body {
     gap: 5px;
 }
 
+.city {
+    border: 5px solid #004f44;
+    background: #004f4440;
+}
+
+.city:hover {
+    border: 5px solid #008a3c;
+    background: #008a3c40;
+}
+
+.zipcode {
+    border: 5px solid #a10151;
+    background: #a1015140;
+}
+
+.zipcode:hover {
+    border: 5px solid #6a0035;
+    background: #6a003540;
+}
+
+.state {
+    border: 5px solid #00D84A;
+    background: #00D84A40;
+}
+
+.state:hover {
+    border: 5px solid #48ab02;
+    background: #48ab0240;
+}
+
 .country {
-    border: 5px solid green;
+    border: 5px solid #950529;
+    background: #95052940;
+}
+
+.country:hover {
+    border: 5px solid #68041d;
+    background: #68041d40;
+}
+
+.district {
+    border: 5px solid #A77B06;
+    background: #C7C11A40;
+}
+
+.district:hover {
+    border: 5px solid #C7C11A;
+    background: #A77B0640;
+}
+
+.continent {
+    border: 5px solid #00A0B0;
+    background: #00A0B040;
+}
+
+.continent:hover {
+    border: 5px solid #017d88;
+    background: #016d7740;
 }
 
 .latlong {
-    border: 5px solid red;
+    border: 5px solid #a10000;
+    background: #a1000040;
+}
+
+.latlong:hover {
+    border: 5px solid #510101;
+    background: #51010140;
+}
+
+.language {
+    border: 5px solid #00b032;
+    background: #00b03240;
+}
+
+.language:hover {
+    border: 5px solid #008426;
+    background: #00842640;
+}
+
+.currency {
+    border: 5px solid #b06f00;
+    background: #b06f0040;
+}
+
+.currency:hover {
+    border: 5px solid #8c5b00;
+    background: #8c5b0040;
+}
+
+.currency-name {
+    border: 5px solid #002cb0;
+    background: #002cb040;
+}
+
+.currency-name:hover {
+    border: 5px solid #001780;
+    background: #00178040;
+}
+
+.isp {
+    border: 5px solid #6f00ff;
+    background: #6f00ff40;
+}
+
+.isp:hover {
+    border: 5px solid #41009d;
+    background: #41009d40;
+}
+
+.calling-code {
+    border: 5px solid #7793f8;
+    background: #7793f840;
+}
+
+.calling-code:hover {
+    border: 5px solid #4d6ecf;
+    background: #4d6ecf40;
+}
+
+.timezone {
+    border: 5px solid #21fff0;
+    background: #21fff040;
+}
+
+.timezone:hover {
+    border: 5px solid #00c6e6;
+    background: #00c6e640;
+}
+
+.org {
+    border: 5px solid #9acd32;
+    background: #9acd3240;
+}
+
+.org:hover {
+    border: 5px solid #6b8e23;
+    background: #6b8e2340;
 }
