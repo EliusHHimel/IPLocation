@@ -1,20 +1,27 @@
+const searchIP = document.getElementById("ip-input");
+const searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", () => {
+    const ip = searchIP.value;
+    geoLocation(ip);
+    searchIP.value = "";
+})
+
 
 function getIP() {
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
             document.getElementById("ip").innerHTML = `<span>Your IP is:</span><span>${data.ip}</span>`;
-            geoLocation();
+            geoLocation(data.ip);
         })
         .catch(error => console.log(error));
 }
 
 getIP();
 
-function geoLocation() {
-    let ip = document.getElementById("ip").innerText;
-    ip = ip.split("Your IP is:\n");
-    ip = ip[1];
+function geoLocation(ip) {
+
     fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=d1374b72c8ae44e5add4c848db5dd48e&ip=${ip}`)
         .then(response => response.json())
         .then(data => {
