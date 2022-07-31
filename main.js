@@ -3,6 +3,7 @@ const searchBtn = document.getElementById("search-btn");
 
 searchBtn.addEventListener("click", () => {
     const ip = searchIP.value;
+    document.getElementById("ip").innerHTML = `<span>Your IP is:</span><span>${ip}</span>`;
     geoLocation(ip);
     searchIP.value = "";
 })
