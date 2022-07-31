@@ -1,6 +1,8 @@
 const searchIP = document.getElementById("ip-input");
 const searchBtn = document.getElementById("search-btn");
 
+// Search IP and Show Location Info
+
 searchBtn.addEventListener("click", () => {
     const ip = searchIP.value;
     document.getElementById("ip").innerHTML = `<span>Your Searched IP is:</span><span>${ip}</span>`;
@@ -8,6 +10,7 @@ searchBtn.addEventListener("click", () => {
     searchIP.value = "";
 })
 
+// Get IP of the user
 
 function getIP() {
     fetch('https://api.ipify.org?format=json')
@@ -20,6 +23,8 @@ function getIP() {
 }
 
 getIP();
+
+// Set GEO Location Details in UI
 
 function geoLocation(ip) {
 
