@@ -24,12 +24,13 @@ function geoLocation() {
             <p class="info zipcode">Zip Code: <br> ${data.zipcode ? data.zipcode : 'Not Found'}</p>
             <p class="info state">Division/State: <br> ${data.state_prov}</p>
             <p class="info country">Country: <br> <img src="${data.country_flag}">${data.country_name + ', ' + data.country_code2}</p>
+            <p class="info district">District: <br> ${data.district}</p>
             <p class="info continent">Continent: <br> ${data.continent_name}</p>
             <p class="info latlong">Latitude: ${data.latitude} <br> Longitude: ${data.longitude}</p>
             <p class="info language">Language: <br> ${data.languages}</p>
             <p class="info currency">Currency: <br> ${data.currency.code} ${data.currency.symbol}</p>
             <p class="info currency-name">Currency Name: <br> ${data.currency.name}</p>
-            <p class="info timezone">Timezone: <br> +${data.time_zone.offset + ' ' + data.time_zone.name}</p>
+            <p class="info timezone">Timezone: <br> ${data.time_zone.name}</p>
             <p class="info calling-code">Calling Country Code: <br> ${data.calling_code}</p>
             <p class="info isp">ISP Name: <br> ${data.isp}</p>
             <p class="info org">Organization: <br> ${data.organization}</p>
